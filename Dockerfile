@@ -21,7 +21,7 @@ RUN wget --quiet http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.
     ./configure --prefix=/usr && \
     make && make install
 SHELL ["/bin/bash", "-l", "-c"]
-RUN pip install git+https://github.com/bitbankinc/python-bitbankcc.git TA-Lib backtesting pandas-highcharts mpl_finance optuna && \
+RUN pip install git+https://github.com/bitbankinc/python-bitbankcc.git TA-Lib backtesting pandas-highcharts mpl_finance optuna pandas-datareader && \
     mkdir /opt/notebooks && /opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/conda install -c anaconda py-xgboost -y --quiet
 ADD docker-entrypoint.sh ./
 RUN ["chmod", "+x", "/docker-entrypoint.sh"]
