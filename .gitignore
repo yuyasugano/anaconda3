@@ -1,4 +1,5 @@
 notebooks/__MACOSX
-notebooks/course1_downloads/.*
 notebooks/.ipynb_checkpoints/
 notebooks/*.ipynb
+notebooks/*/*.ipynb
+notebooks/*
