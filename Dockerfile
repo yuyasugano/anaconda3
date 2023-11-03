@@ -22,7 +22,7 @@ RUN wget --quiet http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.
     make && make install
 SHELL ["/bin/bash", "-l", "-c"]
 RUN pip install --upgrade pip setuptools importlib-metadata && \
-    pip install TA-Lib backtesting pandas-highcharts mpl_finance optuna pandas-datareader python-coinmarketcap && \
+    pip install TA-Lib backtesting pandas-highcharts mpl_finance optuna pandas-datareader python-coinmarketcap papermill && \
     mkdir /opt/notebooks && /opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/conda install -c anaconda py-xgboost keras tensorflow -y --quiet
 ADD docker-entrypoint.sh ./
 RUN ["chmod", "+x", "/docker-entrypoint.sh"]
