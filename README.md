@@ -7,4 +7,9 @@ docker build -t anaconda3:latest .
 ```
 docker run anaconda3
 ```
+- bind the local directory into a container
+```
+docker run -d -p 3000:8888 --name anaconda3 -v "$(pwd)"/notebooks:/opt/notebooks anaconda3
+```
+
  
